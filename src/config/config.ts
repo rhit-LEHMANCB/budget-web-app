@@ -1,8 +1,9 @@
 import * as dotenv from "dotenv";
 import * as path from "path";
 
+console.log("Current directory:", __dirname);
 // Parsing the env file.
-dotenv.config({ path: path.resolve(__dirname, "../config/.env.local") });
+dotenv.config({ path: path.resolve(__dirname, "../../.env.local") });
 
 // Interface to load env variables
 // Note these variables can possibly be undefined

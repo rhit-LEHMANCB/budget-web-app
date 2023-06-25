@@ -1,7 +1,7 @@
 {
   "name": "budget-web-app-backend",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "private": true,
   "dependencies": {
     "dotenv": "^16.3.1",
@@ -10,10 +10,11 @@
     "path": "^0.12.7"
   },
   "scripts": {
-    "build": "tsc",
+    "prebuild": "tsc",
+    "build": "npm run build --prefix src/web",
     "prestart": "npm run build",
-    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "format": "prettier . --write"
   },
   "devDependencies": {
