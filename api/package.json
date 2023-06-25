@@ -1,0 +1,26 @@
+{
+  "name": "budget-web-app-backend",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.1",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
