@@ -17,9 +17,9 @@
   "scripts": {
     "prebuild": "tsc",
     "build": "npm run build --prefix src/web",
-    "prestart": "npm run build",
     "start": "node build/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "test": "echo not-implemented"
   }
 }
