@@ -1,8 +1,8 @@
 import express from "express";
 import { connectToDatabase } from "./services/database.service"
 import { usersRouter } from "./routes/users.router";
-import * as path from "path";
 import config from "./config/config";
+import * as path from "path";
 
 const app = express();
 
