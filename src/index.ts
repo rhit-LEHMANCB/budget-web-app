@@ -1,13 +1,12 @@
 import express from "express";
-import * as dotenv from "dotenv";
 import { connectToDatabase } from "./services/database.service"
 import { usersRouter } from "./routes/users.router";
 import * as path from "path";
+import config from "./config/config";
 
 const app = express();
 
-dotenv.config();
-const port = process.env.PORT || 5000;
+const port = config.PORT || 5000;
 
 connectToDatabase()
     .then(() => {
