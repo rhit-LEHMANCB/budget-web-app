@@ -29,6 +29,6 @@ jobs:
         ATLAS_URI: ${{ secrets.ATLAS_URI }}
         DB_NAME: ${{ secrets.DB_NAME }}
         USERS_COLLECTION_NAME: ${{ secrets.USERS_COLLECTION_NAME }}
-    - run: npm ci
+    - run: npm install
     - run: npm run build --if-present
     - run: npm test
