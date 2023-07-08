@@ -15,8 +15,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "prebuild": "npm install && tsc",
+    "prebuild": "tsc",
     "build": "npm run build --prefix src/web",
+    "render-build": "npm install && npm run build",
     "start": "node build/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "format": "prettier . --write",
