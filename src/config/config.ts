@@ -14,6 +14,10 @@ interface ENV {
     DB_NAME?: string;
     USERS_COLLECTION_NAME?: string;
     PORT?: string;
+    AUTH_SECRET?: string;
+    AUTH_BASE_URL?: string;
+    AUTH_CLIENT_ID?: string;
+    AUTH_ISSUER_BASE_URL?: string;
 }
 
 interface Config {
@@ -21,6 +25,10 @@ interface Config {
     DB_NAME: string;
     USERS_COLLECTION_NAME: string;
     PORT: string;
+    AUTH_SECRET: string;
+    AUTH_BASE_URL: string;
+    AUTH_CLIENT_ID: string;
+    AUTH_ISSUER_BASE_URL: string;
 }
 
 // Loading process.env as ENV interface
@@ -30,7 +38,11 @@ const getConfig = (): ENV => {
         ATLAS_URI: process.env.ATLAS_URI,
         DB_NAME: process.env.DB_NAME,
         USERS_COLLECTION_NAME: process.env.USERS_COLLECTION_NAME,
-        PORT: process.env.PORT
+        PORT: process.env.PORT,
+        AUTH_SECRET: process.env.AUTH_SECRET,
+        AUTH_BASE_URL: process.env.AUTH_BASE_URL,
+        AUTH_CLIENT_ID: process.env.AUTH_CLIENT_ID,
+        AUTH_ISSUER_BASE_URL: process.env.AUTH_ISSUER_BASE_URL,
     };
 };
 
